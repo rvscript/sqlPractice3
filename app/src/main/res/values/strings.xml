@@ -25,4 +25,5 @@
     <string name="bt_add_contact">SAVE</string>
     <string name="hint_email">Email</string>
     <string name="hint_name">Name</string>
+    <string name="read_contacts">Read Contacts</string>
 </resources>

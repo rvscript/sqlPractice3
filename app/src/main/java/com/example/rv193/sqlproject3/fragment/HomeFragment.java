@@ -52,6 +52,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 onDbOpListener.dbOpPerformed(0);
                 somethingClick.somethingClick(0);
             break;
+            case R.id.view_contact:
+                onDbOpListener.dbOpPerformed(1);
+                somethingClick.somethingClick(1);
         }
     }
 

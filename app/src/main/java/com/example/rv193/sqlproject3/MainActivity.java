@@ -7,17 +7,19 @@ import android.widget.Toast;
 
 import com.example.rv193.sqlproject3.fragment.AddContactFragment;
 import com.example.rv193.sqlproject3.fragment.HomeFragment;
+import com.example.rv193.sqlproject3.fragment.ReadContacts;
 
-public class MainActivity extends AppCompatActivity implements  HomeFragment.OnDbOpListener,
-        HomeFragment.OnSomethingClick{
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnDbOpListener,
+        HomeFragment.OnSomethingClick {
     private FragmentManager fm = getSupportFragmentManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(findViewById(R.id.fragment_container)!=null){
-            if(savedInstanceState!=null){
+        if (findViewById(R.id.fragment_container) != null) {
+            if (savedInstanceState != null) {
                 return;
             }
 
@@ -31,20 +33,30 @@ public class MainActivity extends AppCompatActivity implements  HomeFragment.OnD
 
     @Override
     public void dbOpPerformed(int method) {
-        switch (method){
+        switch (method) {
             case 0:
-               fm.beginTransaction()
-               .replace(R.id.fragment_container, new AddContactFragment())
-               .addToBackStack("addContactFragment")
-               .commit();
+                fm.beginTransaction()
+                        .replace(R.id.fragment_container, new AddContactFragment())
+                        .addToBackStack("addContactFragment")
+                        .commit();
+                break;
+            case 1:
+                fm.beginTransaction()
+                        .replace(R.id.fragment_container, new ReadContacts())
+                        .addToBackStack("readContactFragment")
+                        .commit();
+                break;
         }
     }
 
     @Override
     public void somethingClick(int method) {
-        switch (method){
+        switch (method) {
             case 0:
                 Toast.makeText(this, "Something Click: 0", Toast.LENGTH_SHORT).show();
+
+            case 1:
+                Toast.makeText(this, "Something Click: 1", Toast.LENGTH_SHORT).show();
         }
     }
 }

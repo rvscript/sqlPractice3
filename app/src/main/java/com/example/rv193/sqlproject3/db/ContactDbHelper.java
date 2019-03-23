@@ -54,6 +54,7 @@ public class ContactDbHelper extends SQLiteOpenHelper {
         Timber.d("TABLE RAW INSERT...");
     }
 
+    //Method to help us to read for the SQLite database
     public Cursor readContacts(SQLiteDatabase database){
         String[] projections = {CONTACT_ID, CONTACT_NAME, CONTACT_EMAIL};
         Cursor cursor = database.query(TABLE_NAME, projections, null, null, null, null, null);
