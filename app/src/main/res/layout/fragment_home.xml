@@ -23,27 +23,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="@string/addComic"/>
+        android:text="@string/addContact"/>
 
     <Button
         android:id="@+id/remove_contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="@string/updateComic"/>
+        android:text="@string/updateContact"/>
 
     <Button
         android:id="@+id/update_contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="@string/removeComic"/>
+        android:text="@string/removeContact"/>
 
     <Button
         android:id="@+id/view_contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="@string/viewComic"/>
+        android:text="@string/viewContact"/>
 
 </LinearLayout>

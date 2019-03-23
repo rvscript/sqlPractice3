@@ -2,24 +2,24 @@
     <string name="app_name">sqlProject3</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">COMIC DATABASE HOME</string>
-    <string name="addComic">add comic</string>
+    <string name="hello_blank_fragment">CONTACT DATABASE HOME</string>
+    <string name="addContact">add contact</string>
     <string name="addPublisherhint">add publisher</string>
     <string name="button_save">SAVE</string>
     <string name="addTitleText">add title</string>
-    <string name="addNumberHint">add comic number</string>
+    <string name="addNumberHint">add CONTACT number</string>
     <string name="addTitleHint">add title</string>
-    <string name="addVolumehint">add comic volume</string>
-    <string name="addVariantHint">add comic variant</string>
+    <string name="addVolumehint">add CONTACT volume</string>
+    <string name="addVariantHint">add Contact variant</string>
     <string name="addPrintHint">add print</string>
     <string name="addDateHint">add date</string>
-    <string name="addComicTitle">Add Comic To DB</string>
-    <string name="removeComic">REMOVE COMIC</string>
-    <string name="updateComic">UPDATE COMIC</string>
-    <string name="viewComic">View Comic</string>
+    <string name="addContactTitle">Add CONTACT To DB</string>
+    <string name="removeContact">REMOVE CONTACT</string>
+    <string name="updateContact">UPDATE CONTACT</string>
+    <string name="viewContact">View Contact</string>
     <string name="addPrice">add price</string>
     <string name="addPages">add pages</string>
-    <string name="read_comics_title">READ COMICS</string>
+    <string name="read_contacts_title">READ CONTACTS</string>
     <string name="add_contact_title">Add Contact</string>
     <string name="hint_contact_id">Contact ID</string>
     <string name="bt_add_contact">SAVE</string>

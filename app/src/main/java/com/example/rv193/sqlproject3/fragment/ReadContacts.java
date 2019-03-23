@@ -14,6 +14,8 @@ import com.example.rv193.sqlproject3.R;
 import com.example.rv193.sqlproject3.db.ContactContract;
 import com.example.rv193.sqlproject3.db.ContactDbHelper;
 
+import timber.log.Timber;
+
 public class ReadContacts extends Fragment {
     private TextView txtDisplay;
 
@@ -21,14 +23,14 @@ public class ReadContacts extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_read_contacts, container, false);
         txtDisplay = v.findViewById(R.id.read_contacts);
-
+        readContacts();
+        //TODO: Set up Recyclerview for viewing contacts
         return v;
     }
 
@@ -57,10 +59,14 @@ public class ReadContacts extends Fragment {
                     @Override
                     public void run() {
                         txtDisplay.setText(finalInfo);
+                        Timber.d("Info displayed onto text display for read contacts");
                     }
                 });
             }
         }).start();
+
+        //Always close the DB after a transaction
+        contactDbHelper.close();
     }
 
 }

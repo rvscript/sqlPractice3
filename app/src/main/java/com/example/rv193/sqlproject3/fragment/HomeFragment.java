@@ -16,11 +16,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private OnDbOpListener onDbOpListener;
     private OnSomethingClick somethingClick;
 
-    public interface OnDbOpListener{
+    public interface OnDbOpListener {
         void dbOpPerformed(int method);
     }
 
-    public interface OnSomethingClick{
+    public interface OnSomethingClick {
         void somethingClick(int method);
     }
 
@@ -47,25 +47,36 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.add_contact:
                 onDbOpListener.dbOpPerformed(0);
                 somethingClick.somethingClick(0);
-            break;
+                break;
             case R.id.view_contact:
                 onDbOpListener.dbOpPerformed(1);
                 somethingClick.somethingClick(1);
+                break;
+            case R.id.update_contact:
+                onDbOpListener.dbOpPerformed(2);
+                somethingClick.somethingClick(2);
+                break;
+            case R.id.remove_contact:
+                onDbOpListener.dbOpPerformed(2);
+                somethingClick.somethingClick(2);
+                break;
         }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        Activity activity = (Activity)context;
-        try{
-            onDbOpListener = (OnDbOpListener)activity;
-            somethingClick = (OnSomethingClick)activity;
-        }catch (ClassCastException e){ throw new ClassCastException(activity.toString() + "must " +
-                "implement interface method");}
+        Activity activity = (Activity) context;
+        try {
+            onDbOpListener = (OnDbOpListener) activity;
+            somethingClick = (OnSomethingClick) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString() + "must " +
+                    "implement interface method");
+        }
     }
 }
